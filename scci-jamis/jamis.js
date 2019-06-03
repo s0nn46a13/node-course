@@ -1,8 +1,6 @@
 const request = require('request');
 
-const u = (Buffer.from('54696d656d6f6e69746f72', 'hex')).toString();
-const p = (Buffer.from('507574757274316d33696e3244415921', 'hex')).toString();
-const jamisURL = 'https://' + u + ':' + p + '@scci.jamisprime.com/odata/SCCI/TimeCardMonitoring2';
+const jamisURL = (Buffer.from('68747470733a2f2f54696d656d6f6e69746f723a507574757274316d33696e324441592140736363692e6a616d69737072696d652e636f6d2f6f646174612f534343492f54696d65436172644d6f6e69746f72696e6732', 'hex')).toString();;
 const getEmail = [];
 
 const getAddress = () => {
