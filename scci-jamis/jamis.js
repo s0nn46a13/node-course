@@ -13,7 +13,6 @@ const getAddress = () => {
             })
         );
         console.log(getEmail);
-        // return results;
     });
 };
 
