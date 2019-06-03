@@ -1,7 +1,7 @@
 const request = require('request');
 
-const u = (Buffer.from('313031303639', 'hex')).toString();
-const p = (Buffer.from('3672314646313768', 'hex')).toString();
+const u = ;
+const p = ;
 const jamisURL = 'https://' + u + ':' + p + '@scci.jamisprime.com/odata/SCCI/TimeCardMonitoring2';
 const getEmail = [];
 
