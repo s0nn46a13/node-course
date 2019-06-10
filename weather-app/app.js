@@ -1,5 +1,6 @@
 const request = require('request');
-const geocode = require('./utils/geocode')
+const geocode = require('./utils/geocode');
+const forecast = require('./utils/forecast');
 
 // const url = 'https://api.darksky.net/forecast/8ac4f163892c8d2c6b2765a49e34de18/37.8267,-122.4233';
 
@@ -13,10 +14,10 @@ const geocode = require('./utils/geocode')
 //     }
 // });
 
-// geocode('Boston', (error, data) => {
-//     console.log('Error', error)
-//     console.log('Data',data)
-// });
+geocode('Boston', (error, data) => {
+    console.log('Error', error)
+    console.log('Data',data)
+});
 
 //
 // Goal: Create a reusable function for getting the forecast
@@ -28,7 +29,7 @@ const geocode = require('./utils/geocode')
 //    - Coordinate error, pass string for error
 //    - Success, pass forecast string for data (same format as from before)
 
-forecast(-75.7088, 44.1545, (error, data) => {
-    console.log('Error', error);
-    console.log('Data', data);
-  });
+// forecast(-75.7088, 44.1545, (error, data) => {
+//     console.log('Error', error);
+//     console.log('Data', data);
+//   });
