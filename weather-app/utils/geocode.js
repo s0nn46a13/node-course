@@ -5,9 +5,9 @@ const geocode = (address, callback) => {
 
     request({ url: geocodeURL, json:true}, (error, response) => {
         if (error) {
-            callback('Unable to connect to location services!');
+            callback('Unable to connect to location services!', undefined);
         } else if (response.body.features.length === 0) {
-            callback('Unable to find location.  Try another search.');
+            callback('Unable to find location.  Try another search.', undefined);
         } else {
             callback(undefined, {
                 latitude: response.body.features[0].center[1],
