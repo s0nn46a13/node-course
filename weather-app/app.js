@@ -14,10 +14,10 @@ const forecast = require('./utils/forecast');
 //     }
 // });
 
-geocode('Boston', (error, data) => {
-    console.log('Error', error)
-    console.log('Data',data)
-});
+// geocode('Boston', (error, data) => {
+//     console.log('Error', error)
+//     console.log('Data',data)
+// });
 
 //
 // Goal: Create a reusable function for getting the forecast
@@ -29,7 +29,7 @@ geocode('Boston', (error, data) => {
 //    - Coordinate error, pass string for error
 //    - Success, pass forecast string for data (same format as from before)
 
-// forecast(-75.7088, 44.1545, (error, data) => {
-//     console.log('Error', error);
-//     console.log('Data', data);
-//   });
+forecast(-75.7088, 44.1545, (error, data) => {
+    console.log('Error', error);
+    console.log('Data', data);
+  });

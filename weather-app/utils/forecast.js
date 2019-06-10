@@ -1,21 +1,20 @@
-const forecast = () => {
-    const forecastURL ='https://api.mapbox.com/geocoding/v5/mapbox.places/' +  encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiczBubjQ2YTEzIiwiYSI6ImNqd2V0dmZ5dzEyejU0OW83bjBudTRvcDcifQ.jTcPg2mvcMhCUu3_N3TJng'
+const request = require('request');
+
+const forecast = (longitude, latitude, callback) => {
+    const forecastURL ='https://api.darksky.net/forecast/8ac4f163892c8d2c6b2765a49e34de18/' +  latitude + longitude
 
     request({ url: forecastURL, json:true}, (error, response) => {
         if (error) {
-            callback('Unable to connect to location services!');
-        } else if (response.body.features.length === 0) {
+            callback('Unable to connect to weather services!');
+        } else if (response.body.currently.length === 0) {
             callback('Unable to find location.  Try another search.');
         } else {
             callback(undefined, {
-                latitude: response.body.features[0].center[1],
-                longitude: response.body.features[0].center[0],
-                location: response.body.features[0].place_name,
+                temperature: response.body.currently.temperature,
+                precipProbability: response.body.currently.precipProbability,
             })
         };
     });
 };
 
 module.exports = forecast;
-
-https://api.darksky.net/forecast/8ac4f163892c8d2c6b2765a49e34de18/30.417,-97.747
