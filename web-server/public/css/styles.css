@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'aadhunik';
+    src: url('../font/Aadhunik.ttf');
+}
+
 body {
     color: #333333;
-    font-family: helvetica;
+    font-family: 'aadhunik';
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
