@@ -45,3 +45,18 @@ header a {
 .portrait {
     width: 250px;
 }
+
+input {
+    font-family: 'aadhunik';
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'aadhunik';
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
